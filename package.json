@@ -1,0 +1,35 @@
+{
+  "name": "komod",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Рабочий проект «komod»",
+  "keywords": [],
+  "author": "Алексей Фетисов",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alfet123/komod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alfet123/komod/issues"
+  },
+  "homepage": "https://github.com/alfet123/komod",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "6.5.3",
+    "grunt": "1.0.1",
+    "grunt-contrib-less": "1.4.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-lintspaces": "0.8.0",
+    "grunt-postcss": "0.8.0",
+    "load-grunt-tasks": "3.5.2"
+  },
+  "scripts": {
+    "test": "grunt lintspaces:codestyle",
+    "start": "grunt watch"
+  },
+  "engines": {
+    "node": "6.9.1"
+  }
+}
