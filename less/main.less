@@ -1,0 +1,71 @@
+/****************/
+/***   MAIN   ***/
+/****************/
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, a, ul, li, img {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+/*  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;*/
+/*  text-align: center;*/
+/*  text-transform: uppercase;*/
+
+  color: #000;
+  background-color: @bg-color;
+}
+
+a {
+  text-decoration: none;
+/*  text-transform: uppercase;*/
+}
+
+ul {
+  list-style: none;
+  /*font-size: 0;*/
+}
+
+li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+label, input, textarea {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+table, tbody, tr, td {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 1000px;
+/*  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);*/
+}
+
+.btn {
+  display: block;
+  padding: 2px 5px;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid white;
+  &:hover {
+    background-color: @btn-hover-color;
+  }
+}
