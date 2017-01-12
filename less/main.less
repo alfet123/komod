@@ -8,12 +8,12 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, ul, li, img {
 }
 
 body {
-/*  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 18px;*/
-/*  text-align: center;*/
-/*  text-transform: uppercase;*/
+/*  line-height: 18px; */
+/*  text-align: center; */
+/*  text-transform: uppercase; */
 
   color: #000;
   background-color: @bg-color;
@@ -21,12 +21,12 @@ body {
 
 a {
   text-decoration: none;
-/*  text-transform: uppercase;*/
+/*  text-transform: uppercase; */
 }
 
 ul {
   list-style: none;
-  /*font-size: 0;*/
+/*  font-size: 0; */
 }
 
 li {
@@ -62,10 +62,21 @@ table, tbody, tr, td {
 .btn {
   display: block;
   padding: 2px 5px;
-  color: #fff;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
   text-transform: uppercase;
+
+  color: #fff;
+  background-color: @main-color;
+
   border: 2px solid white;
+
   &:hover {
-    background-color: @btn-hover-color;
+    color: @main-color;
+    background-color: #fff;
   }
 }
