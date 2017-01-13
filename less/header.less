@@ -33,4 +33,45 @@
 .feedback {
   float: right;
   text-align: right;
+
+  &__phone {
+    background: url('../img/phone.png') no-repeat;
+  }
+
+  &__phone-item {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: right;
+  }
+
+  &__btn {
+    display: block;
+    padding: 5px;
+
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: @main-color;
+
+    border: 2px solid white;
+
+    &:hover {
+      color: @main-color;
+      background-color: #fff;
+    }
+  }
+
+  &__worktime {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

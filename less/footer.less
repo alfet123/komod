@@ -51,15 +51,21 @@
 
 .copyright {
   float: right;
-  padding-top: 7px;
-  color: #ccc;
+  padding-top: 10px;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: lighten(@main-color, 20%);
 
   &-text {
 
   }
 
   &-link {
-    color: #ccc;
+    color: lighten(@main-color, 20%);
     &:hover {
       color: #fff;
       text-decoration: underline;

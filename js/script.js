@@ -6,8 +6,10 @@
 
   var catalog = document.querySelector('.catalog');
   var images = catalog.querySelectorAll('img');
+
   var modal = document.querySelector(".modal");
   var closeBtn = modal.querySelector(".modal__close-btn");
+  var modalImage = modal.querySelector(".modal__image");
 
 // Переключение меню
 
@@ -31,8 +33,8 @@
   var showGallary = function(evt) {
     if (!modal.classList.contains("modal--show")) {
       modal.classList.add("modal--show");
-      window.console.log(evt.target.attributes.src.value);
     }
+    modalImage.innerHTML = '<img src="' + evt.target.attributes.src.value + '" alt="' + evt.target.attributes.alt.value + '" width="480" height="480">';
   }
 
   for (var i = 0; i < images.length; i++) {
