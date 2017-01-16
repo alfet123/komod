@@ -29,7 +29,7 @@
           <p class="feedback__phone-item">8 800 100 4688</p>
           <p class="feedback__phone-item">8 963 046 2888</p>
         </div>
-        <a class="feedback__btn" href="feedback.php">Заказать обратный звонок</a>
+        <a class="feedback__btn" href="#">Заказать обратный звонок</a>
         <p class="feedback__worktime">Работаем ПН-ВС с 10 до 20</p>
       </div>
 
@@ -82,9 +82,12 @@
         <form class="feedback-form" action="feedback.php" method="post">
           <h3 class="form-title">Хотите такой комодик?</h3>
           <p class="form-text">Оставьте свой номер телефона и наш менеджер свяжется с вами в течение 30 минут.</p>
-          <input class="form-input" type="phone" placeholder="8 (xxx) xxx-xx-xx" required>
+          <label class="form-label" for="phone">
+            <input class="form-input" type="phone" name="phone" id="phone" placeholder="Номер телефона" required="">
+            <div class="form-clear"></div>
+          </label>
           <p class="form-text">Расскажет о наличии, стоимости, сроках доставки, способах оплаты, ответит на ваши вопросы по комодикам.</p>
-          <input class="form-submit" type="submit" value="Заказать обратный звонок">
+          <input class="form-submit  form-submit-disabled" type="submit" value="Заказать обратный звонок">
           <p class="form-text">Если вы принимаете решение о покупке, ...</p>
         </form>
       </div>

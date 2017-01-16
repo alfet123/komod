@@ -71,36 +71,117 @@
   width: 258px;
   padding: 20px;
 
+  color: #000;
   text-align: center;
 
-  border: 1px solid #888;
+  border: 2px solid @main-color;
   border-radius: 10px;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(70, 130, 180, 0.2);
 
   &:hover {
-    color: #000;
-    border-color: #333;
-    background-color: rgba(0,0,0,0.2);
+/*    color: #000; */
+/*    border-color: #333; */
+/*    background-color: rgba(0, 0, 0, 0.2); */
   }
 }
 
 .form-title {
   margin-bottom: 30px;
-  border-bottom: 2px solid #333;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: @main-color;
 }
 
 .form-text {
   margin-bottom: 20px;
 }
 
-.form-input {
+.form-label {
+  position: relative;
+
   margin: 0 auto;
-  width: 70%;
   margin-bottom: 20px;
+
+  width: 204px;
+
+  font-size: 0;
+}
+
+.form-input {
+  padding: 5px;
+
+  width: 190px;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: none;
+
+  color: @main-color;
+  background-color: #fff;
+
+  border: 2px solid @main-color;
+  border-radius: 5px;
+}
+
+.form-clear {
+  position: absolute;
+
+  top: 6px;
+  right: 4px;
+
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+
+  background: url('../img/clear.png') center no-repeat;
+
+  &:hover {
+    background: url('../img/clear-hover.png') center no-repeat;
+  }
 }
 
 .form-submit {
   margin: 0 auto;
+
   margin-bottom: 20px;
+  padding: 5px;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
   cursor: pointer;
+
+  color: @main-color;
+  background-color: #fff;
+
+  border: 2px solid @main-color;
+  border-radius: 5px;
+
+  &:hover {
+    color: #fff;
+    background-color: @main-color;
+  }
+}
+
+.form-submit-disabled {
+  cursor: default;
+  color: desaturate(lighten(@main-color, 20%), 100%);
+  background-color: #fff;
+  border: 2px solid desaturate(lighten(@main-color, 20%), 100%);
+  &:hover {
+    color: desaturate(lighten(@main-color, 20%), 100%);
+    background-color: #fff;
+    border: 2px solid desaturate(lighten(@main-color, 20%), 100%);
+  }
 }

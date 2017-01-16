@@ -4,6 +4,13 @@
   var mainMenu = document.querySelector('.main-menu');
   var stickedMenu = document.querySelector('.sticked-menu');
 
+  var feedbackBtn = document.querySelector('.feedback__btn');
+
+  var formInput = document.querySelector('.form-input');
+  var formClear = document.querySelector('.form-clear');
+  var formSubmit = document.querySelector('.form-submit');
+//  var phoneString = '';
+
   var catalog = document.querySelector('.catalog');
   var images = catalog.querySelectorAll('img');
 
@@ -27,6 +34,49 @@
   window.addEventListener('scroll', switchMenu);
 
   switchMenu();
+
+// Кнопка обратной связи
+
+  feedbackBtn.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    formInput.click();
+    formInput.focus();
+  });
+
+// Форма обратной связи
+
+  var checkInput = function() {
+    if (formInput.value === '') {
+      if (!formSubmit.classList.contains('form-submit-disabled')) {
+        formSubmit.classList.add('form-submit-disabled');
+      }
+    } else {
+      if (formSubmit.classList.contains('form-submit-disabled')) {
+        formSubmit.classList.remove('form-submit-disabled');
+      }
+    }
+  }
+
+  formInput.addEventListener('input', function() {
+    checkInput();
+  });
+
+  formInput.addEventListener('click', function() {
+    if (formInput.value === '' || formInput.value === '8' || formInput.value === '8 ') {
+      formInput.value = '8 ';
+//      phoneString = '8 ';
+    }
+//    checkInput();
+  });
+
+  formClear.addEventListener('click', function() {
+//    evt.stopImmediatePropagation();
+    formInput.value = '';
+//    phoneString = '';
+    checkInput();
+  });
+
+  formInput.value = '';
 
 // Отображение галереи
 
