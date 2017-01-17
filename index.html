@@ -12,8 +12,9 @@
 <body>
 
 
-  <header class="header">
   <a name="main"></a>
+
+  <header class="header">
     <div class="container  clearfix">
 
       <div class="logo  clearfix">
@@ -82,10 +83,10 @@
         <form class="feedback-form" action="feedback.php" method="post">
           <h3 class="form-title">Хотите такой комодик?</h3>
           <p class="form-text">Оставьте свой номер телефона и наш менеджер свяжется с вами в течение 30 минут.</p>
-          <label class="form-label" for="phone">
-            <input class="form-input" type="phone" name="phone" id="phone" placeholder="Номер телефона" required="">
+          <div class="form-label">
+            <input class="form-input" type="phone" name="phone" id="phone" placeholder="Номер телефона">
             <div class="form-clear"></div>
-          </label>
+          </div>
           <p class="form-text">Расскажет о наличии, стоимости, сроках доставки, способах оплаты, ответит на ваши вопросы по комодикам.</p>
           <input class="form-submit  form-submit-disabled" type="submit" value="Заказать обратный звонок">
           <p class="form-text">Если вы принимаете решение о покупке, ...</p>
@@ -95,8 +96,10 @@
   </div>
 
 
+  <a name="catalog"></a>
+
   <div class="catalog">
-    <a name="catalog"></a>
+    <div class="catalog__scroll"></div>
     <div class="container clearfix">
       <h2 class="catalog-title">Наши комодики</h2>
 
@@ -244,8 +247,10 @@
   </div>
 
 
+  <a name="gallery"></a>
+
   <div class="gallery">
-    <a name="gallery"></a>
+    <div class="gallery__scroll"></div>
     <div class="container  clearfix">
       <h2 class="gallery-title">Фотогаллерея</h2>
       <p class="gallery-text">No photo</p>
@@ -253,8 +258,10 @@
   </div>
 
 
+  <a name="comments"></a>
+
   <div class="comments">
-    <a name="comments"></a>
+    <div class="comments__scroll"></div>
     <div class="container  clearfix">
       <h2 class="gallery-title">Отзывы и комментарии</h2>
       <p class="gallery-text">No comments</p>
@@ -283,8 +290,10 @@
 
 
   <div class="modal">
-    <div class="modal__close-btn"></div>
-    <div class="modal__image"></div>
+    <div class="modal__frame">
+      <div class="modal__close-btn"></div>
+      <div class="modal__image"></div>
+    </div>
   </div>
 
 

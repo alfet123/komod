@@ -13,6 +13,8 @@
 }
 
 .promo-ideal {
+  display: none;
+
   float: left;
 
   width: 700px;
@@ -62,8 +64,6 @@
   float: right;
   padding-top: 70px;
   width: 300px;
-
-/*  background-color: rgba(255,0,0,0.1);*/
 }
 
 .feedback-form {
@@ -77,12 +77,6 @@
   border: 2px solid @main-color;
   border-radius: 10px;
   background-color: rgba(70, 130, 180, 0.2);
-
-  &:hover {
-/*    color: #000; */
-/*    border-color: #333; */
-/*    background-color: rgba(0, 0, 0, 0.2); */
-  }
 }
 
 .form-title {
@@ -107,15 +101,19 @@
   margin: 0 auto;
   margin-bottom: 20px;
 
-  width: 204px;
+  width: 190px;
 
-  font-size: 0;
+/*  font-size: 0; */
+  background-color: #fff;
+
+  border: 2px solid @main-color;
+  border-radius: 5px;
 }
 
 .form-input {
   padding: 5px;
 
-  width: 190px;
+  width: 150px;
 
   font-family: 'Roboto', 'Arial', sans-serif;
   font-weight: 700;
@@ -126,14 +124,16 @@
   color: @main-color;
   background-color: #fff;
 
-  border: 2px solid @main-color;
+/*  border: 2px solid @main-color; */
+  border: none;
   border-radius: 5px;
 }
 
 .form-clear {
   position: absolute;
+  z-index: 10;
 
-  top: 6px;
+  top: 4px;
   right: 4px;
 
   width: 20px;
@@ -179,6 +179,7 @@
   color: desaturate(lighten(@main-color, 20%), 100%);
   background-color: #fff;
   border: 2px solid desaturate(lighten(@main-color, 20%), 100%);
+
   &:hover {
     color: desaturate(lighten(@main-color, 20%), 100%);
     background-color: #fff;

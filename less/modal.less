@@ -5,25 +5,36 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 50;
+  z-index: 100;
 
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
 
-  width: 480px;
-  height: 480px;
+  width: 100%;
+  height: 100%;
 
-  margin-top: -240px;
-  margin-left: -240px;
-
-  padding: 0;
-
-  color: #000;
-  background: #fff;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
 
   &--show {
     display: block;
+  }
+
+  &__frame {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 480px;
+    height: 480px;
+
+    margin-top: -240px;
+    margin-left: -240px;
+
+    padding: 0;
+
+    color: #000;
+    background: #fff;
   }
 
   &__close-btn {
