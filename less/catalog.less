@@ -12,7 +12,7 @@
     height: 31px;
   }
 
-  &-title {
+  &__title {
     padding: 5px;
     margin-bottom: 8px;
     text-align: center;
@@ -20,51 +20,46 @@
     background-color: @main-color;
   }
 
-  &-item {
+  &__item {
     margin-bottom: 20px;
 
     &-view {
+/*
       float: left;
       margin-right: 40px;
-      width: 560px;
+      width: 700px;
+*/
     }
 
-    &-name {
+    &-image {
+      display: block;
 
-    }
-
-    &-bigimg {
       float: left;
-      margin-right: 20px;
+      margin-right: 60px;
+
       width: 240px;
       height: 240px;
 
       cursor: pointer;
     }
 
-    &-colors {
-      float: left;
-      padding-top: 30px;
-      width: 300px;
-    }
-
-    &-small {
-      float: left;
-      width: 100px;
-      height: 100px;
-
-      cursor: pointer;
-    }
-
     &-info {
       float: left;
-      padding-top: 140px;
-      width: 400px;
-      text-align: right;
+      padding-top: 20px;
+      width: 700px;
+/*      text-align: right; */
+    }
+
+    &-name {
+      margin-bottom: 20px;
+    }
+
+    &-description {
+      margin-bottom: 20px;
     }
 
     &-price {
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
 
     &-orderbtn {
@@ -89,9 +84,37 @@
         background-color: @main-color;
       }
     }
+
+    &-colors {
+/*
+      float: left;
+      padding-top: 30px;
+      width: 300px;
+*/
+      font-size: 0;
+    }
+
+    &-small {
+/*
+      float: left;
+*/
+      display: inline-block;
+      vertical-align: top;
+
+      width: 96px;
+      height: 96px;
+
+      border: 2px solid #fff;
+      cursor: pointer;
+
+      &--current {
+        border: 2px solid @main-color;
+      }
+    }
+
   }
 
-  &-delimiter {
+  &__delimiter {
     height: 10px;
     background-color: @main-color;
     border: none;

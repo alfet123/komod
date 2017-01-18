@@ -14,8 +14,9 @@
 //  var phoneString = '';
 
   var catalog = document.querySelector('.catalog');
-  var images = catalog.querySelectorAll('img');
-  var orderBtn = catalog.querySelectorAll('.catalog-item-orderbtn');
+  var catalogItems = document.querySelectorAll('.catalog__item');
+  var images = catalog.querySelectorAll('.catalog__item-image');
+  var orderBtn = catalog.querySelectorAll('.catalog__item-orderbtn');
 
   var modal = document.querySelector(".modal");
   var closeBtn = modal.querySelector(".modal__close-btn");
