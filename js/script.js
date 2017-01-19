@@ -14,7 +14,8 @@
 //  var phoneString = '';
 
   var catalog = document.querySelector('.catalog');
-  var catalogItems = document.querySelectorAll('.catalog__item');
+//  var catalogItemColors = catalog.querySelectorAll('.catalog__item-colors');
+  var smallImages = catalog.querySelectorAll('.catalog__item-small');
   var images = catalog.querySelectorAll('.catalog__item-image');
   var orderBtn = catalog.querySelectorAll('.catalog__item-orderbtn');
 
@@ -154,11 +155,30 @@
 
   formInput.value = '';
 
+// Работа с каталогом
+
+  var smallImageClickHandler = function(evt) {
+    for (var i = 0; i < evt.target.parentNode.children.length; i++) {
+      var smallImageElement = evt.target.parentNode.children[i];
+      if (smallImageElement.classList.contains('catalog__item-small--current')) {
+        smallImageElement.classList.remove('catalog__item-small--current');
+      }
+    }
+    if (!evt.target.classList.contains('catalog__item-small--current')) {
+      evt.target.classList.add('catalog__item-small--current');
+    }
+    evt.target.parentNode.parentNode.querySelector('.catalog__item-image').src = evt.target.src;
+  }
+
+  for (var i = 0; i < smallImages.length; i++) {
+    smallImages[i].addEventListener('click', smallImageClickHandler);
+  }
+
 // Отображение галереи
 
   var showGallary = function(evt) {
-    if (!modal.classList.contains("modal--show")) {
-      modal.classList.add("modal--show");
+    if (!modal.classList.contains('modal--show')) {
+      modal.classList.add('modal--show');
     }
     modalImage.innerHTML = '<img src="' + evt.target.attributes.src.value + '" alt="' + evt.target.attributes.alt.value + '" width="480" height="480">';
   }
@@ -167,14 +187,14 @@
     images[i].addEventListener('click', showGallary);
   }
 
-  closeBtn.addEventListener("click", function() {
-    modal.classList.remove("modal--show");
+  closeBtn.addEventListener('click', function() {
+    modal.classList.remove('modal--show');
   });
 
-  window.addEventListener("keydown", function(evt) {
+  window.addEventListener('keydown', function(evt) {
     if (evt.keyCode === 27) {
-      if (modal.classList.contains("modal--show")) {
-        modal.classList.remove("modal--show");
+      if (modal.classList.contains('modal--show')) {
+        modal.classList.remove('modal--show');
       }
     }
   });

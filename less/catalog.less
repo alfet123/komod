@@ -107,9 +107,20 @@
       border: 2px solid #fff;
       cursor: pointer;
 
-      &--current {
-        border: 2px solid @main-color;
+      &:hover {
+        border: 2px solid #ccc;
       }
+
+      &--current {
+
+        border: 2px solid @main-color;
+
+        &:hover {
+          border: 2px solid @main-color;
+        }
+
+      }
+
     }
 
   }
